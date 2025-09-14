@@ -14,6 +14,14 @@
 
 <hr style="border:1px solid #ecf0f1;">
 
+<h2 style="color:#2980b9;">🔑 Prerequisites</h2>
+<p style="color:#2c3e50; font-size:1em;">
+  To use the official ICD-11 API, you need to register on the <a href="https://icd.who.int/icdapi/Account/Register" target="_blank">ICD-11 API Portal</a> and obtain your <strong>Client ID</strong> and <strong>Client Secret</strong>.
+</p>
+<p style="color:#e74c3c; font-weight:bold;">Note: The API will not work without these credentials.</p>
+
+<hr style="border:1px solid #ecf0f1;">
+
 <h2 style="color:#2980b9;">💻 Installation</h2>
 <ol style="color:#2c3e50; font-size:1em;">
   <li>Clone or download this repository.</li>
