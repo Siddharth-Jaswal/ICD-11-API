@@ -52,7 +52,7 @@ Replace <code>&lt;disease_name&gt;</code> with your disease query, e.g. <code>di
 
 <p style="color:#2c3e50; font-size:1em;">Query:</p>
 <pre style="background-color:#ecf0f1; padding:10px; border-radius:5px; color:#2c3e50;">
-GET: http://localhost:3000/fhir/icd11/search?q=diabetes
+GET: http://localhost:3000/fhir/icd11/search?name=diabetes
 </pre>
 
 <p style="color:#2c3e50; font-size:1em;">Response:</p>
@@ -91,3 +91,22 @@ GET: http://localhost:3000/fhir/icd11/search?q=diabetes
 </pre>
 
 <hr style="border:1px solid #ecf0f1;">
+
+<h2 style="color:#2980b9;">🔐 WHO SSL Certificates</h2>
+<p style="color:#2c3e50; font-size:1em;">
+  To securely connect to the official ICD-11 API, you need to download the <strong>WHO SSL certificate chain</strong>.  
+  This is a single file (e.g., <code>who_chain.pem</code>) that includes the following chained certificates:
+</p>
+<ul style="color:#2c3e50; font-size:1em;">
+  <li><strong>GDIG</strong> – intermediate certificate</li>
+  <li><strong>GDROOT</strong> – root certificate</li>
+  <li><strong>MSCVR</strong> – intermediate certificate</li>
+</ul>
+
+<p style="color:#2c3e50; font-size:1em;">
+  The <code>who_chain.crt</code> file should be used for SSL verification when making requests to the ICD-11 API. Chain the above three certificates into the file name who_chain.crt and store all in a folder name <code>certs</code> in the root directory.
+</p>
+
+
+
+
