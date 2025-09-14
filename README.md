@@ -39,11 +39,55 @@
 </p>
 
 <pre style="background-color:#ecf0f1; padding:10px; border-radius:5px; color:#2c3e50;">
-GET: http://localhost:3000/fhir/icd11/search?q=&lt;disease_name&gt;
+GET: http://localhost:3000/fhir/icd11/search?name=&lt;disease_name&gt;
 </pre>
 
 <p style="color:#2c3e50; font-size:1em;">
 Replace <code>&lt;disease_name&gt;</code> with your disease query, e.g. <code>diabetes</code>.
 </p>
+
+<hr style="border:1px solid #ecf0f1;">
+
+<h2 style="color:#2980b9;">💡 Example Query & Response</h2>
+
+<p style="color:#2c3e50; font-size:1em;">Query:</p>
+<pre style="background-color:#ecf0f1; padding:10px; border-radius:5px; color:#2c3e50;">
+GET: http://localhost:3000/fhir/icd11/search?q=diabetes
+</pre>
+
+<p style="color:#2c3e50; font-size:1em;">Response:</p>
+<pre style="background-color:#ecf0f1; padding:10px; border-radius:5px; color:#2c3e50;">
+{
+  "query": "diabetes",
+  "count": 50,
+  "results": [
+    {
+      "id": "1697306310",
+      "icd11Code": "5A14",
+      "title": "Diabetes mellitus, type unspecified",
+      "score": 1,
+      "synonyms": [
+        "&lt;em class='found'&gt;diabetes&lt;/em&gt; NOS",
+        "controlled &lt;em class='found'&gt;diabetes&lt;/em&gt;",
+        "controlled &lt;em class='found'&gt;diabetic&lt;/em&gt;",
+        "&lt;em class='found'&gt;diabetes&lt;/em&gt; mellitus NOS",
+        "severe &lt;em class='found'&gt;diabetes&lt;/em&gt; mellitus"
+      ]
+    },
+    {
+      "id": "1320503631",
+      "icd11Code": "JA63.2",
+      "title": "Diabetes mellitus arising in pregnancy",
+      "score": 0.724,
+      "synonyms": [
+        "&lt;em class='found'&gt;diabetes&lt;/em&gt; of pregnancy",
+        "gestational &lt;em class='found'&gt;diabetes&lt;/em&gt;",
+        "Gestational &lt;em class='found'&gt;diabetes&lt;/em&gt; mellitus NOS"
+      ]
+    }
+    // ... more results
+  ]
+}
+</pre>
 
 <hr style="border:1px solid #ecf0f1;">
